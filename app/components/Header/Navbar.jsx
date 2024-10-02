@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // ICONS
 import logo from "@/public/assets/images/logo.webp";
@@ -19,6 +19,7 @@ const Navbar = () => {
   const { theme } = useTheme();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const logoSrc = theme === "light" ? logoBlack : logo;
 
@@ -26,9 +27,28 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <header className="dark:border-b-gray-700">
+      <header
+        className={`fixed ${
+          isScrolled ? "top-0" : "md:top-13"
+        } w-full z-50 dark:border-b-gray-700 transition-all duration-300`}
+      >
         <nav className="bg-white border-gray-200 dark:bg-zinc-950">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <Link href="/" className="flex items-center">
