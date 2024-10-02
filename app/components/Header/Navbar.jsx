@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="bg-white border-b border-b-gray-300 dark:border-b-gray-700">
+      <header className="dark:border-b-gray-700">
         <nav className="bg-white border-gray-200 dark:bg-zinc-950">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <Link href="/" className="flex items-center">
@@ -44,7 +44,7 @@ const Navbar = () => {
                 aria-expanded="false"
                 onClick={toggleMenu}
               >
-                <span className="sr-only">Open main menu</span>
+                <span className="sr-only">Menu</span>
                 <IoMdMenu size={24} />
               </button>
             </div>

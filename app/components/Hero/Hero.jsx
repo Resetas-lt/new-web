@@ -1,6 +1,6 @@
 "use client"; // Ensure this component is rendered on the client side
 
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const typingContainer = {

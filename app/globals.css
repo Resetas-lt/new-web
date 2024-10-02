@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-300 dark:bg-slate-950 scroll-smooth overflow-hidden;
+  @apply bg-gray-300 dark:bg-slate-950 scroll-smooth;
 }
