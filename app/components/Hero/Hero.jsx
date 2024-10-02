@@ -79,7 +79,7 @@ const Hero = () => {
           </button>
 
           <div className="cards-container mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-            {["IT Aptarnavimas", "Microsoft produktai", "Prekyba"].map(
+            {["Kompiuteriai", "Spausdintuvai", "Serveriai"].map(
               (title, index) => (
                 <motion.div
                   key={index}

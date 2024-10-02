@@ -13,6 +13,8 @@ import { useTheme } from "next-themes";
 
 import { IoMdMenu } from "react-icons/io";
 
+// COMPONENTS
+import DropdownMenu from "../Menu/Dropdown";
 import ThemeButton from "./ThemeButton";
 
 const Navbar = () => {
@@ -20,11 +22,41 @@ const Navbar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [dropdownStates, setDropdownStates] = useState({});
+  const [dropdownTimeout, setDropdownTimeout] = useState(null);
 
   const logoSrc = theme === "light" ? logoBlack : logo;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleMouseEnter = (menuName) => {
+    setDropdownStates((prevState) => ({
+      ...prevState,
+      [menuName]: true,
+    }));
+  };
+
+  const handleMouseLeave = (menuName) => {
+    const timeout = setTimeout(() => {
+      setDropdownStates((prevState) => ({
+        ...prevState,
+        [menuName]: false,
+      }));
+    }, 150);
+
+    setDropdownStates((prevState) => ({
+      ...prevState,
+      [`${menuName}Timeout`]: timeout,
+    }));
+  };
+
+  const handleClick = (menuName) => {
+    setDropdownStates((prevState) => ({
+      ...prevState,
+      [menuName]: !prevState[menuName],
+    }));
   };
 
   useEffect(() => {
@@ -47,7 +79,7 @@ const Navbar = () => {
       <header
         className={`fixed ${
           isScrolled ? "top-0" : "md:top-13"
-        } w-full z-50 dark:border-b-gray-700 transition-all duration-300`}
+        } w-full z-50 dark:border-b-gray-700 transition-transform`}
       >
         <nav className="bg-white border-gray-200 dark:bg-zinc-950">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -75,15 +107,52 @@ const Navbar = () => {
               } w-full md:flex md:w-auto md:order-1`}
             >
               <ul className="flex flex-col w-full font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-zinc-950  dark:border-gray-700">
-                <li>
-                  <Link
-                    href="#"
-                    className="block font-semibold py-2 px-3 md:p-0 text-white bg-red-700 rounded md:bg-transparent md:text-red-700 md:dark:text-red-500 transition-all ease-in-out"
-                    aria-current="page"
-                  >
-                    Pagrindinis
-                  </Link>
-                </li>
+                <DropdownMenu
+                  menuName="IT Paslaugos"
+                  dropdownStates={dropdownStates}
+                  isOpen={dropdownStates["IT Paslaugos"]}
+                  onClick={() => handleClick("IT Paslaugos")}
+                  onMouseEnter={() => handleMouseEnter("IT Paslaugos")}
+                  onMouseLeave={() => handleMouseLeave("IT Paslaugos")}
+                >
+                  <li>
+                    <Link href="#" className="dropdown-item">
+                      IT Aptarnavimas
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="dropdown-item">
+                      Kompiuterių remontas
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="dropdown-item">
+                      Spausdintuvų remontas
+                    </Link>
+                  </li>
+                </DropdownMenu>
+
+                <DropdownMenu
+                  menuName="Nuoma"
+                  dropdownStates={dropdownStates}
+                  isOpen={dropdownStates["Nuoma"]}
+                  onClick={() => handleClick("Nuoma")}
+                  onMouseEnter={() => handleMouseEnter("Nuoma")}
+                  onMouseLeave={() => handleMouseLeave("Nuoma")}
+                >
+                  <li>
+                    <Link href="#" className="dropdown-item">
+                      Spausdintuvų
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link href="#" className="dropdown-item">
+                      Serverių
+                    </Link>
+                  </li>
+                </DropdownMenu>
+
                 <li>
                   <Link
                     href="#"
