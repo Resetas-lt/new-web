@@ -44,7 +44,7 @@ const Navbar = () => {
         ...prevState,
         [menuName]: false,
       }));
-    }, 150);
+    }, 100);
 
     setDropdownStates((prevState) => ({
       ...prevState,
@@ -130,6 +130,11 @@ const Navbar = () => {
                       Spausdintuvų remontas
                     </Link>
                   </li>
+                  <li>
+                    <Link href="#" className="dropdown-item">
+                      Debesijos sprendimai
+                    </Link>
+                  </li>
                 </DropdownMenu>
 
                 <DropdownMenu
@@ -153,22 +158,21 @@ const Navbar = () => {
                   </li>
                 </DropdownMenu>
 
-                <li>
-                  <Link
-                    href="#"
-                    className="block font-semibold py-2 px-3 md:p-0 rounded md:hover:bg-transparent md:hover:text-red-700 md:dark:hover:text-red-500 dark:text-white transition-all ease-in-out"
-                  >
-                    Apie
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="block font-semibold py-2 px-3 md:p-0 rounded md:hover:bg-transparent md:hover:text-red-700 md:dark:hover:text-red-500 dark:text-white transition-all ease-in-out"
-                  >
-                    Paslaugos
-                  </Link>
-                </li>
+                <DropdownMenu
+                  menuName="Sprendimai"
+                  dropdownStates={dropdownStates}
+                  isOpen={dropdownStates["Sprendimai"]}
+                  onClick={() => handleClick("Sprendimai")}
+                  onMouseEnter={() => handleMouseEnter("Sprendimai")}
+                  onMouseLeave={() => handleMouseLeave("Sprendimai")}
+                >
+                  <li>
+                    <Link href="#" className="dropdown-item">
+                      Atsarginės kopijos
+                    </Link>
+                  </li>
+                </DropdownMenu>
+
                 <li>
                   <Link
                     href="#"

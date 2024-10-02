@@ -15,7 +15,7 @@ body {
 }
 
 .dropdown-item {
-  @apply block px-4 py-2 text-sm dark:hover:bg-zinc-700 border-b dark:border-b-zinc-800;
+  @apply block px-4 py-2 text-sm dark:hover:bg-zinc-700 border-b dark:border-b-zinc-800 hover:bg-gray-100;
 }
 
 .card {
