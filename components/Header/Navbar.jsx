@@ -23,7 +23,6 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [dropdownStates, setDropdownStates] = useState({});
-  const [dropdownTimeout, setDropdownTimeout] = useState(null);
 
   const logoSrc = theme === "light" ? logoBlack : logo;
 
@@ -106,7 +105,7 @@ const Navbar = () => {
                 isMenuOpen ? "flex" : "hidden"
               } w-full md:flex md:w-auto md:order-1`}
             >
-              <ul className="flex flex-col w-full font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-zinc-950  dark:border-gray-700">
+              <ul className="flex flex-col w-full font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
                 <DropdownMenu
                   menuName="IT Paslaugos"
                   dropdownStates={dropdownStates}

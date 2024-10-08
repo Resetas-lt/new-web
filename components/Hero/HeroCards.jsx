@@ -9,7 +9,7 @@ import {
 
 import { GrResources } from "react-icons/gr";
 
-const HeroCards = () => {
+const HeroCards = ({ showIntro }) => {
   const icons = [
     { icon: FaLaptop, label: "Kompiuteriai" },
     { icon: FaPrint, label: "Spausdintuvai" },
@@ -26,7 +26,7 @@ const HeroCards = () => {
           key={index}
           className="card mt-2"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={{ opacity: showIntro ? 0 : 1 }}
           transition={{ delay: index * 0.75, duration: 1 }}
         >
           <Icon size={35} />
