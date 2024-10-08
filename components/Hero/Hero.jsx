@@ -2,6 +2,10 @@
 
 import { motion } from "framer-motion";
 
+import TypewriterComponent from "typewriter-effect";
+
+import HeroCards from "./HeroCards";
+
 const Hero = () => {
   const typingContainer = {
     hidden: { opacity: 1 },
@@ -43,10 +47,11 @@ const Hero = () => {
           src="/assets/videos/hero.mp4"
           autoPlay
           muted
+          loop
         ></video>
 
         {/* Background Overlay */}
-        <div className="absolute inset-0 bg-black opacity-60 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 dark:bg-black opacity-60 backdrop-blur-sm"></div>
 
         {/* Content */}
         <div className="relative z-10">
@@ -57,42 +62,24 @@ const Hero = () => {
             variants={typingContainer}
           >
             {coloredText}
-            <motion.span
-              className="bg-white ml-1 w-1"
-              style={{ height: "1em" }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 1, 1, 0] }}
-              transition={{
-                repeat: Infinity,
-                repeatType: "loop",
-                duration: 1,
-                delay: 1,
-              }}
-            ></motion.span>
           </motion.div>
 
-          <p className="text-lg md:text-2xl mb-8 text-neutral-300">
-            Visos IT paslaugos vienoje vietoje
-          </p>
+          <span className="text-lg md:text-2xl mb-8 text-neutral-300 w-80 md:w-full overflow-hidden">
+            <TypewriterComponent
+              options={{
+                strings: ["Visos IT paslaugos vienoje vietoje"],
+                autoStart: true,
+                loop: true,
+                delay: 170,
+              }}
+            />
+          </span>
+
           <button className="bg-red-600 animate-pulse hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition ease-in">
             PAGALBA
           </button>
 
-          <div className="cards-container mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-            {["Kompiuteriai", "Spausdintuvai", "Serveriai"].map(
-              (title, index) => (
-                <motion.div
-                  key={index}
-                  className="card"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: index * 0.75, duration: 1 }}
-                >
-                  <h3 className="text-xl font-bold mb-2">{title}</h3>
-                </motion.div>
-              )
-            )}
-          </div>
+          <HeroCards />
         </div>
       </div>
     </>

@@ -132,7 +132,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link href="#" className="dropdown-item">
-                      Debesijos sprendimai
+                      Programavimas
                     </Link>
                   </li>
                 </DropdownMenu>
@@ -147,13 +147,12 @@ const Navbar = () => {
                 >
                   <li>
                     <Link href="#" className="dropdown-item">
-                      Spausdintuvų
+                      Serverių
                     </Link>
                   </li>
-
                   <li>
                     <Link href="#" className="dropdown-item">
-                      Serverių
+                      Spausdintuvų
                     </Link>
                   </li>
                 </DropdownMenu>
@@ -168,7 +167,37 @@ const Navbar = () => {
                 >
                   <li>
                     <Link href="#" className="dropdown-item">
-                      Atsarginės kopijos
+                      Kopijavimo sistemos
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="dropdown-item">
+                      Apsaugos priemonės
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="dropdown-item">
+                      Duomenų kopijos
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="dropdown-item">
+                      Debesijos sistemos
+                    </Link>
+                  </li>
+                </DropdownMenu>
+
+                <DropdownMenu
+                  menuName="Kitos paslaugos"
+                  dropdownStates={dropdownStates}
+                  isOpen={dropdownStates["Kitos paslaugos"]}
+                  onClick={() => handleClick("Kitos paslaugos")}
+                  onMouseEnter={() => handleMouseEnter("Kitos paslaugos")}
+                  onMouseLeave={() => handleMouseLeave("Kitos paslaugos")}
+                >
+                  <li>
+                    <Link href="#" className="dropdown-item">
+                      Konsultacijos
                     </Link>
                   </li>
                 </DropdownMenu>
