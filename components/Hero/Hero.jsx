@@ -3,6 +3,9 @@
 import TypewriterComponent from "typewriter-effect";
 import HeroCards from "./HeroCards";
 
+import { IoIosCall } from "react-icons/io";
+import Link from "next/link";
+
 const Hero = () => {
   return (
     <>
@@ -36,9 +39,22 @@ const Hero = () => {
             />
           </span>
 
-          <button className="bg-red-600 animate-pulse hover:bg-red-700 text-white font-bold py-2 px-4 mt-1 rounded transition ease-in">
-            PAGALBA
-          </button>
+          <div className="hidden md:block">
+            <button className="bg-red-600 animate-pulse hover:bg-red-700 text-white font-bold py-2 px-4 mt-1 rounded transition ease-in">
+              PAGALBA
+            </button>
+          </div>
+
+          <div className="md:hidden block">
+            <Link href="tel: +37067186969">
+              <button className="bg-red-600 animate-pulse hover:bg-red-700 text-white font-bold py-2 px-4 mt-1 rounded transition ease-in">
+                <span className="flex flex-row gap-1">
+                  <IoIosCall size={25} />
+                  Skambinti
+                </span>
+              </button>
+            </Link>
+          </div>
 
           <HeroCards />
         </div>
