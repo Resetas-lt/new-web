@@ -19,7 +19,7 @@ const HeroCards = () => {
   ];
 
   return (
-    <div className="cards-container mt-8 grid-cols-1 md:grid-cols-3 gap-4 md:grid w-80">
+    <div className="cards-container mt-8 grid-cols-1 md:grid-cols-3 gap-4 md:grid w-80 md:w-full">
       {icons.map(({ icon: Icon, label }, index) => (
         <motion.div
           key={index}
