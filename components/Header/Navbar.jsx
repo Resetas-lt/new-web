@@ -83,7 +83,12 @@ const Navbar = () => {
         <nav className="bg-white border-gray-200 dark:bg-zinc-950">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <Link href="/" className="flex items-center">
-              <Image src={logoSrc} width={140} alt="Resetas Logo" />
+              <Image
+                className="hover:opacity-80 transition ease-in-out"
+                src={logoSrc}
+                width={140}
+                alt="Resetas Logo"
+              />
             </Link>
             <div className="flex md:order-2 space-x-3 md:space-x-0">
               <ThemeButton />
@@ -105,7 +110,7 @@ const Navbar = () => {
                 isMenuOpen ? "flex" : "hidden"
               } w-full md:flex md:w-auto md:order-1`}
             >
-              <ul className="flex flex-col w-full font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
+              <ul className="flex flex-col w-full font-medium p-4 md:p-0 mt-4 dark:border dark:md:border-none shadow-md md:shadow-none rounded-lg md:space-x-8 md:flex-row md:mt-0 dark:border-gray-800">
                 <DropdownMenu
                   menuName="IT Paslaugos"
                   dropdownStates={dropdownStates}

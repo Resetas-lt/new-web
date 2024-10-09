@@ -31,9 +31,10 @@ const Intro = ({ onAnimationEnd }) => {
       >
         <Image src={logo} alt="Resetas.lt logo" />
       </motion.div>
+
       <div className="w-2/3 h-2 bg-gray-700 rounded-full overflow-hidden">
         <div
-          className="h-full bg-red-600 transition-all duration-300"
+          className="h-full bg-red-600 transition-all duration-100"
           style={{ width: `${progress}%` }}
         ></div>
       </div>

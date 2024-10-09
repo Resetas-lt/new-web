@@ -6,21 +6,20 @@ import {
   FaCode,
   FaNetworkWired,
 } from "react-icons/fa";
+import { FaFileContract } from "react-icons/fa6";
 
-import { GrResources } from "react-icons/gr";
-
-const HeroCards = ({ showIntro }) => {
+const HeroCards = () => {
   const icons = [
     { icon: FaLaptop, label: "Kompiuteriai" },
     { icon: FaPrint, label: "Spausdintuvai" },
     { icon: FaServer, label: "Serveriai" },
     { icon: FaNetworkWired, label: "Tinklai" },
     { icon: FaCode, label: "Programavimas" },
-    { icon: GrResources, label: "Nuoma" },
+    { icon: FaFileContract, label: "Nuoma" },
   ];
 
   return (
-    <div className="cards-container mt-8 hidden grid-cols-1 md:grid-cols-3 gap-4 md:grid">
+    <div className="cards-container mt-8 grid-cols-1 md:grid-cols-3 gap-4 md:grid w-80">
       {icons.map(({ icon: Icon, label }, index) => (
         <motion.div
           key={index}
