@@ -7,7 +7,11 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        roboto: ["var(--font-roboto)", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };

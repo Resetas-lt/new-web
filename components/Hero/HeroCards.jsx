@@ -23,6 +23,7 @@ const HeroCards = () => {
       {icons.map(({ icon: Icon, label }, index) => (
         <motion.div
           key={index}
+          title={label}
           className="card mt-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: [0, 1] }}

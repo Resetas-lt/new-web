@@ -6,11 +6,11 @@ import { useTheme } from "next-themes";
 import { CiDark, CiLight } from "react-icons/ci";
 
 const ThemeButton = ({ className }) => {
-  const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
+  const { theme, setTheme } = useTheme();
 
   return (
     <button
+      aria-label="Temos parinkimas"
       onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
       className={`${className} dark:text-white rounded hover:bg-red-800 hover:text-white p-1`}
     >

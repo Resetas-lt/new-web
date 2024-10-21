@@ -3,12 +3,16 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-300 dark:bg-slate-950 scroll-smooth;
+  @apply bg-gray-100 dark:bg-slate-950 scroll-smooth;
 }
 
 .cards-container .card:nth-child(2),
 .cards-container .card:nth-child(5) {
   @apply md:mt-6;
+}
+
+.container {
+  @apply w-8/12 mx-auto py-10;
 }
 
 .cards-container {
@@ -25,4 +29,8 @@ body {
 
 .card span {
   @apply flex-1 text-center;
+}
+
+.divider {
+  @apply h-2 rounded-full border-0 bg-gray-300 dark:bg-slate-600 mt-1 md:w-1/12 w-1/3;
 }

@@ -87,7 +87,7 @@ const Navbar = () => {
                 className="hover:opacity-80 transition ease-in-out"
                 src={logoSrc}
                 width={140}
-                alt="Resetas Logo"
+                alt="Resetas"
               />
             </Link>
             <div className="flex md:order-2 space-x-3 md:space-x-0">
@@ -120,23 +120,65 @@ const Navbar = () => {
                   onMouseLeave={() => handleMouseLeave("IT Paslaugos")}
                 >
                   <li>
-                    <Link href="#" className="dropdown-item">
+                    <Link
+                      href="/it-services/it-maintenance"
+                      className="dropdown-item"
+                    >
                       IT Aptarnavimas
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="dropdown-item">
+                    <Link
+                      href="/it-services/computers-repair"
+                      className="dropdown-item"
+                    >
                       Kompiuterių remontas
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="dropdown-item">
+                    <Link
+                      href="/it-services/printers-repair"
+                      className="dropdown-item"
+                    >
                       Spausdintuvų remontas
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="dropdown-item">
+                    <Link
+                      href="/it-services/programming"
+                      className="dropdown-item"
+                    >
                       Programavimas
+                    </Link>
+                  </li>
+                </DropdownMenu>
+
+                <DropdownMenu
+                  menuName="Prekyba"
+                  dropdownStates={dropdownStates}
+                  isOpen={dropdownStates["Prekyba"]}
+                  onClick={() => handleClick("Prekyba")}
+                  onMouseEnter={() => handleMouseEnter("Prekyba")}
+                  onMouseLeave={() => handleMouseLeave("Prekyba")}
+                >
+                  <li>
+                    <Link href="#" className="dropdown-item">
+                      Nauja įranga
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="dropdown-item">
+                      Naudota įranga
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="dropdown-item">
+                      Eksploatacinės medžiagos
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="dropdown-item">
+                      Spausdinimo reikmenys
                     </Link>
                   </li>
                 </DropdownMenu>

@@ -32,7 +32,10 @@ const Hero = () => {
             <span className="text-lg md:text-2xl mb-8 text-neutral-300 w-80 md:w-full overflow-hidden">
               <TypewriterComponent
                 options={{
-                  strings: ["Visos IT paslaugos vienoje vietoje"],
+                  strings: [
+                    "Visos IT paslaugos vienoje vietoje",
+                    "Susisiekime jau dabar",
+                  ],
                   autoStart: true,
                   loop: true,
                   delay: 125,
