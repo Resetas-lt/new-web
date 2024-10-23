@@ -24,11 +24,11 @@ const DropdownMenu = ({
       >
         <Link
           href="#"
-          className="block font-semibold py-2 px-3 md:p-0 md:hover:text-red-700 md:dark:hover:text-red-500 dark:text-white rounded md:bg-transparent transition-all ease-in-out"
+          className="block font-semibold py-2 px-3 md:p-0 md:hover:text-red-700 md:dark:hover:text-red-500 dark:text-white rounded md:bg-transparent transition-all ease-in-out group"
           aria-current="page"
         >
           {menuName}
-          <MdArrowDropDown className="inline-block" />
+          <MdArrowDropDown className="inline-block transform transition-transform duration-300 group-hover:rotate-180" />
         </Link>
         {isOpen && (
           <div className="absolute left-0 mt-2 w-60 bg-white dark:bg-zinc-900 dark:text-white rounded-md shadow-lg z-10 border dark:border-zinc-800">

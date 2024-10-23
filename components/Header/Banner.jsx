@@ -33,6 +33,15 @@ const Banner = () => {
               <span>servisas@resetas.lt</span>
             </span>
           </Link>
+
+          <span className="text-black dark:text-gray-700 mx-2 mt-2">|</span>
+
+          <Link href="mailto: info@resetas.lt">
+            <span className="flex items-center text-sm gap-1 border-b-2 border-b-slate-400 dark:border-b-white pr-2 hover:scale-105 dark:hover:opacity-80 p-1 rounded transition ease-in">
+              <HiOutlineEnvelope size={19} />
+              <span>info@resetas.lt</span>
+            </span>
+          </Link>
         </div>
 
         <div className="md:flex hidden flex-row justify-center gap-2 md:w-2/5 w-full">
