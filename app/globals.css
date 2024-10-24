@@ -36,7 +36,9 @@ body {
 }
 
 .divider {
-  @apply h-2 rounded-full border-0 bg-gray-300 dark:bg-slate-600 mt-3;
+  @apply h-2 rounded-full border-0 bg-gradient-to-r from-slate-600 to-red-600 mt-3;
+  @apply animate-gradient;
+  background-size: 200% 200%;
 }
 
 @layer base {
