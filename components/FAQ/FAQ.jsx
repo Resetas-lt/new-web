@@ -7,9 +7,9 @@ import {
 
 const FAQ = () => {
   return (
-    <div className="flex flex-col w-full">
-      <div className="bg-gradient-to-br from-gray-200 to-red-50 dark:from-slate-900 dark:to-red-900 md:rounded-bl-full md:rounded-tr-full p-10">
-        <div className="w-2/3 mx-auto">
+    <div className="flex flex-col w-full md:p-10 p-2">
+      <div className="bg-gradient-to-br from-gray-200 to-red-50 dark:from-slate-900 dark:to-red-900 md:rounded-bl-full md:rounded-tr-full rounded-tr-[100px] rounded-bl-[100px] p-10">
+        <div className="md:w-2/3 mx-auto">
           <div className="flex flex-col">
             <span className="text-2xl font-bold font-sans">D.U.K.</span>
             <span className="text-xs text-gray-500 font-sans font-semibold">
@@ -74,18 +74,6 @@ const FAQ = () => {
 
             <AccordionItem value="6">
               <AccordionTrigger>
-                Ar jūsų pirminė diagnostika yra nemokama?
-              </AccordionTrigger>
-              <AccordionContent>
-                <span className="font-bold">Taip.</span> Jeigu įrenginį
-                remontuosite arba įsigysite kitą pas mus.
-                <br />
-                Jeigu diagnostika atlikta nuotoliu/telefonu - nemokamai.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="7">
-              <AccordionTrigger>
                 Ar teikiate paslaugas ne darbo dienomis/laiku?
               </AccordionTrigger>
               <AccordionContent>
@@ -96,7 +84,7 @@ const FAQ = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="8">
+            <AccordionItem value="7">
               <AccordionTrigger>
                 Ar galima su jumis pasikonsultuoti dėl naujo įrenginio
                 įsigijimo?
