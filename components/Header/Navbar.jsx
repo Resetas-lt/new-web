@@ -84,7 +84,7 @@ const Navbar = () => {
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <Link href="/" className="flex items-center">
               <Image
-                className="hover:opacity-80 transition ease-in-out"
+                className="hover:opacity-80 transition ease-in-out hover:scale-95"
                 src={logoSrc}
                 width={140}
                 alt="Resetas"
@@ -124,7 +124,7 @@ const Navbar = () => {
                       href="/it-services/it-maintenance"
                       className="dropdown-item"
                     >
-                      IT Aptarnavimas
+                      IT priežiūra
                     </Link>
                   </li>
                   <li>

@@ -1,5 +1,5 @@
 import Hero from "../components/Hero/Hero";
-import About from "@/components/About/About";
+import FAQ from "@/components/FAQ/FAQ";
 
 export const metadata = {
   title: "Resetas.lt - IT paslaugos",
@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <>
       <Hero />
-      <About />
+      <FAQ />
     </>
   );
 }

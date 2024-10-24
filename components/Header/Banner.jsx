@@ -6,7 +6,7 @@ import { SiAnydesk } from "react-icons/si";
 
 const Banner = () => {
   return (
-    <div className="xl:flex hidden p-2 dark:bg-zinc-900 w-full dark:text-white border-b border-b-gray-200 dark:border-b-zinc-700 bg-gray-100">
+    <div className="2xl:flex hidden p-2 dark:bg-zinc-900 w-full dark:text-white border-b border-b-gray-200 dark:border-b-zinc-700 bg-gray-100">
       <div className="flex w-full justify-center items-center md:mx-[10rem] space-x-10">
         <div className="flex flex-row justify-center items-center gap-2 xl:w-3/5">
           <Link href="tel: +37067186969">

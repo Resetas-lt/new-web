@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col md:border-l border-gray-600 px-4">
-          <span class="bg-gray-100 font-mono text-sm text-gray-800 w-full text-center font-semibold me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-200">
+          <span class="bg-gray-100 font-sans text-sm text-gray-800 w-full text-center font-semibold me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-200">
             KLIENTAMS
           </span>
 
@@ -73,7 +73,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col md:border-l border-gray-600 px-4">
-          <span class="bg-gray-100 font-mono text-sm text-gray-800 w-full text-center font-semibold me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-200">
+          <span class="bg-gray-100 font-sans text-sm text-gray-800 w-full text-center font-semibold me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-200">
             NUORODOS
           </span>
 
