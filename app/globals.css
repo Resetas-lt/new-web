@@ -32,7 +32,7 @@ body {
 }
 
 .footer-link {
-  @apply hover:opacity-80 transition hover:animate-pulse;
+  @apply hover:opacity-80 transition ease-in-out hover:animate-pulse hover:scale-95;
 }
 
 .divider {

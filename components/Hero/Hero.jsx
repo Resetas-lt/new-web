@@ -34,11 +34,17 @@ const Hero = () => {
                 options={{
                   strings: [
                     "Visos IT paslaugos vienoje vietoje",
-                    "Susisiekime jau dabar",
+                    "Kompiuterių remontas",
+                    "Spausdintuvų remontas",
+                    "Serverių sprendimai",
+                    "Programavimas",
+                    "Dizainas",
+                    "IT konsultacijos",
+                    "Susisiekime jau dabar!",
                   ],
                   autoStart: true,
                   loop: true,
-                  delay: 125,
+                  delay: "natural",
                 }}
               />
             </span>

@@ -66,7 +66,7 @@ const Footer = () => {
             <li>
               <span className="flex flex-row items-center footer-link">
                 <MdArrowRight className="text-red-600" size={25} />
-                <Link href="#">D.U.K.</Link>
+                <Link href="/#faq">D.U.K.</Link>
               </span>
             </li>
           </ul>

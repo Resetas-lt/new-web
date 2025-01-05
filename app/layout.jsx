@@ -1,15 +1,18 @@
 "use client";
 import "./globals.css";
 
+// FONTS
+import { Inter } from "next/font/google";
+
 import { useState } from "react";
 import { ThemeProvider } from "next-themes";
-import { Inter } from "next/font/google";
 
 // COMPONENTS
 import Navbar from "../components/Header/Navbar";
 import Banner from "../components/Header/Banner";
 import Intro from "../components/Intro/Intro";
 import Footer from "@/components/Footer/Footer";
+import ScrollTop from "@/components/ScrollTop/ScrollTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +30,7 @@ export default function RootLayout({ children }) {
               <Navbar />
               <main className="main-content">{children}</main>
               <Footer />
+              <ScrollTop />
             </>
           )}
         </ThemeProvider>
