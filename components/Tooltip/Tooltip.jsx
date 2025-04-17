@@ -13,7 +13,7 @@ const Tooltip = ({ text, children }) => {
     >
       {children}
       {visible && (
-        <div className="absolute z-10 inline-block left-4mt-2 px-1 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-100 tooltip dark:bg-gray-700">
+        <div className="absolute z-10 inline-block left-4mt-2 px-1 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-100 tooltip dark:bg-gray-700">
           {text}
         </div>
       )}

@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   const [introEnded, setIntroEnded] = useState(false);
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
         <ThemeProvider attribute="class">
           {!introEnded && <Intro onAnimationEnd={() => setIntroEnded(true)} />}

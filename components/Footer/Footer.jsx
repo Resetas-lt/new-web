@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col md:border-l border-gray-600 px-4">
-          <span class="font-sans text-sm text-gray-800 w-full text-center font-bold me-2 px-2.5 py-0.5 rounded-tl-full rounded-br-full bg-gradient-to-r from-gray-100 to-red-200 dark:from-gray-700 dark:to-gray-800 dark:text-gray-200">
+          <span className="font-sans text-sm text-gray-800 w-full text-center font-bold me-2 px-2.5 py-0.5 rounded-tl-full rounded-br-full bg-linear-to-r from-gray-100 to-red-200 dark:from-gray-700 dark:to-gray-800 dark:text-gray-200">
             KLIENTAMS
           </span>
 
@@ -73,7 +73,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col md:border-l border-gray-600 px-4">
-          <span class="font-sans text-sm text-gray-800 w-full text-center font-bold me-2 px-2.5 py-0.5 rounded-tl-full rounded-br-full bg-gradient-to-r from-red-200 to-gray-100 dark:from-gray-800 dark:to-gray-700 dark:text-gray-200">
+          <span className="font-sans text-sm text-gray-800 w-full text-center font-bold me-2 px-2.5 py-0.5 rounded-tl-full rounded-br-full bg-linear-to-r from-red-200 to-gray-100 dark:from-gray-800 dark:to-gray-700 dark:text-gray-200">
             NUORODOS
           </span>
 

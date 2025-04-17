@@ -11,7 +11,7 @@ const FAQ = () => {
       className="flex flex-col w-full md:p-10 md:scroll-m-10 scroll-m-12"
       id="faq"
     >
-      <div className="bg-gradient-to-br from-gray-200 to-red-50 dark:from-slate-900 dark:to-red-900 md:rounded-bl-full md:rounded-tr-full p-10">
+      <div className="bg-linear-to-br from-gray-200 to-red-50 dark:from-slate-900 dark:to-red-900 md:rounded-bl-full md:rounded-tr-full p-10">
         <div className="md:w-2/3 mx-auto">
           <div className="flex flex-col">
             <span className="text-2xl font-bold font-sans">D.U.K.</span>
@@ -21,7 +21,7 @@ const FAQ = () => {
           </div>
         </div>
 
-        <div className="flex mx-auto md:w-2/5 w-full shadow-lg rounded-lg mt-2 bg-gray-500 backdrop-filter backdrop-blur-sm bg-opacity-5">
+        <div className="flex mx-auto md:w-2/5 w-full shadow-lg rounded-lg mt-2 bg-gray-500/5 backdrop-filter backdrop-blur-xs">
           <Accordion type="single" collapsible className="w-full p-4 md:ml-6">
             <AccordionItem value="1">
               <AccordionTrigger>Ar atvykstate į vietą?</AccordionTrigger>

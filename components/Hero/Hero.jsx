@@ -21,7 +21,7 @@ const Hero = () => {
           ></video>
 
           {/* Background Overlay */}
-          <div className="absolute inset-0 dark:bg-black opacity-60 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 dark:bg-black opacity-60 backdrop-blur-xs"></div>
 
           {/* Content */}
           <div className="relative z-10">
