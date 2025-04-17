@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
             <>
               <Banner />
               <Navbar />
-              <main className="main-content">{children}</main>
+              <main className="main-content min-h-[40rem]">{children}</main>
               <Footer />
               <ScrollTop />
             </>

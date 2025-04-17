@@ -31,6 +31,17 @@ const FAQ = () => {
               </AccordionContent>
             </AccordionItem>
 
+            <AccordionItem value="8">
+              <AccordionTrigger>
+                Ar turite veikiančią el. parduotuvę?
+              </AccordionTrigger>
+              <AccordionContent>
+                <span className="font-bold">Kol kas ne.</span> Visus užsakymus
+                priimame telefonu ar el. paštu. Netolimoje ateityje planuojame
+                atsidaryti el. parduotuvę.
+              </AccordionContent>
+            </AccordionItem>
+
             <AccordionItem value="2">
               <AccordionTrigger>
                 Ar pas jus galima įsigyti naują įrenginį?
@@ -60,7 +71,7 @@ const FAQ = () => {
               <AccordionContent>
                 <span className="font-bold">Taip.</span> Viena iš mūsų įmonės
                 veiklų yra prekyba spausdintuvų kasetėmis, spausdinimo
-                popieriumi bei eksploatacinėmis medžiagomis.
+                popieriumi bei kitomis spausdinimo eksploatacinėmis medžiagomis.
               </AccordionContent>
             </AccordionItem>
 

@@ -16,6 +16,7 @@ import { IoMdMenu } from "react-icons/io";
 // COMPONENTS
 import DropdownMenu from "../Menu/Dropdown";
 import ThemeButton from "./ThemeButton";
+import MobileSidebar from "./MobileSidebar";
 
 const Navbar = () => {
   const { theme } = useTheme();
@@ -73,11 +74,70 @@ const Navbar = () => {
     };
   }, []);
 
+  // Sidebar navigation structure
+  const sidebarLinks = [
+    {
+      label: "IT Paslaugos",
+      children: [
+        { label: "IT priežiūra", href: "/it-paslaugos/it-prieziura" },
+        { label: "Programavimas", href: "/it-paslaugos/programavimas" },
+        {
+          label: "Kompiuterių remontas",
+          href: "/it-paslaugos/kompiuteriu-remontas",
+        },
+        {
+          label: "Spausdintuvų remontas",
+          href: "/it-paslaugos/spausdintuvu-remontas",
+        },
+      ],
+    },
+    {
+      label: "Prekyba",
+      children: [
+        { label: "Nauja įranga", href: "#" },
+        { label: "Naudota įranga", href: "#" },
+        { label: "Eksploatacinės medžiagos", href: "#" },
+        { label: "Spausdinimo reikmenys", href: "#" },
+      ],
+    },
+    {
+      label: "Nuoma",
+      children: [
+        { label: "Serverių", href: "#" },
+        { label: "Spausdintuvų", href: "#" },
+      ],
+    },
+    {
+      label: "Sprendimai",
+      children: [
+        { label: "Kopijavimo sistemos", href: "#" },
+        { label: "Apsaugos priemonės", href: "#" },
+        { label: "Duomenų kopijos", href: "#" },
+        { label: "Debesijos sistemos", href: "#" },
+      ],
+    },
+    {
+      label: "Kitos paslaugos",
+      children: [{ label: "Konsultacijos", href: "#" }],
+    },
+    {
+      label: "Kontaktai",
+      href: "#",
+    },
+  ];
+
   return (
     <>
+      {/* Mobile Sidebar */}
+      <MobileSidebar
+        isOpen={isMenuOpen}
+        onClose={toggleMenu}
+        links={sidebarLinks}
+      />
+
       <header
         className={`fixed ${
-          isScrolled ? "top-0" : "md:top-13"
+          isScrolled ? "top-0" : "2xl:top-12"
         } w-full z-50 dark:border-b-gray-700 transition-transform`}
       >
         <nav className="bg-white border-gray-200 dark:bg-zinc-950">
@@ -93,11 +153,12 @@ const Navbar = () => {
             <div className="flex md:order-2 space-x-3 md:space-x-0">
               <ThemeButton />
 
+              {/* MOBILE MENU BUTTON */}
               <button
                 type="button"
                 className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-hidden focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 aria-controls="navbar-cta"
-                aria-expanded="false"
+                aria-expanded={isMenuOpen}
                 onClick={toggleMenu}
               >
                 <span className="sr-only">Menu</span>
@@ -105,11 +166,8 @@ const Navbar = () => {
               </button>
             </div>
 
-            <div
-              className={`items-center justify-between ${
-                isMenuOpen ? "flex" : "hidden"
-              } w-full md:flex md:w-auto md:order-1`}
-            >
+            {/* Desktop menu only */}
+            <div className="hidden md:flex items-center justify-between w-full md:w-auto md:order-1">
               <ul className="flex flex-col w-full font-medium p-4 md:p-0 mt-4 dark:border dark:md:border-none shadow-md md:shadow-none rounded-lg md:space-x-8 md:flex-row md:mt-0 dark:border-gray-800">
                 <DropdownMenu
                   menuName="IT Paslaugos"
@@ -121,7 +179,7 @@ const Navbar = () => {
                 >
                   <li>
                     <Link
-                      href="/it-services/it-maintenance"
+                      href="/it-paslaugos/it-prieziura"
                       className="dropdown-item"
                     >
                       IT priežiūra
@@ -129,7 +187,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link
-                      href="/it-services/programming"
+                      href="/it-paslaugos/programavimas"
                       className="dropdown-item"
                     >
                       Programavimas
@@ -137,7 +195,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link
-                      href="/it-services/computers-repair"
+                      href="/it-paslaugos/kompiuteriu-remontas"
                       className="dropdown-item"
                     >
                       Kompiuterių remontas
@@ -145,14 +203,13 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link
-                      href="/it-services/printers-repair"
+                      href="/it-paslaugos/spausdintuvu-remontas"
                       className="dropdown-item"
                     >
                       Spausdintuvų remontas
                     </Link>
                   </li>
                 </DropdownMenu>
-
                 <DropdownMenu
                   menuName="Prekyba"
                   dropdownStates={dropdownStates}
@@ -182,7 +239,6 @@ const Navbar = () => {
                     </Link>
                   </li>
                 </DropdownMenu>
-
                 <DropdownMenu
                   menuName="Nuoma"
                   dropdownStates={dropdownStates}
@@ -202,7 +258,6 @@ const Navbar = () => {
                     </Link>
                   </li>
                 </DropdownMenu>
-
                 <DropdownMenu
                   menuName="Sprendimai"
                   dropdownStates={dropdownStates}
@@ -232,7 +287,6 @@ const Navbar = () => {
                     </Link>
                   </li>
                 </DropdownMenu>
-
                 <DropdownMenu
                   menuName="Kitos paslaugos"
                   dropdownStates={dropdownStates}
@@ -247,7 +301,6 @@ const Navbar = () => {
                     </Link>
                   </li>
                 </DropdownMenu>
-
                 <li>
                   <Link
                     href="#"

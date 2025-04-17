@@ -12,7 +12,7 @@ const ThemeButton = ({ className }) => {
     <button
       aria-label="Temos parinkimas"
       onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
-      className={`${className} dark:text-white rounded hover:bg-red-800 hover:text-white p-1`}
+      className={`${className} dark:text-white rounded hover:bg-red-800 hover:text-white hover:cursor-pointer p-1`}
     >
       {theme === "light" ? (
         <CiDark size={28} />

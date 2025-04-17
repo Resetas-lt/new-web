@@ -38,7 +38,7 @@ const Hero = () => {
                     "Spausdintuvų remontas",
                     "Serverių sprendimai",
                     "Programavimas",
-                    "Dizainas",
+                    "UI/UX Dizainas",
                     "IT konsultacijos",
                     "Susisiekime jau dabar!",
                   ],
@@ -49,11 +49,15 @@ const Hero = () => {
               />
             </span>
 
+            {/* FOR DESKTOPS */}
+
             <div className="hidden md:block">
               <button className="bg-red-600 animate-pulse hover:bg-red-700 text-white font-bold py-2 px-4 mt-1 rounded transition ease-in">
                 PAGALBA
               </button>
             </div>
+
+            {/* FOR MOBILE */}
 
             <div className="md:hidden block">
               <Link href="tel: +37067186969">
