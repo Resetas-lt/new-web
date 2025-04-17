@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import logo from "@/public/assets/images/logo.webp";
+import certificate from "@/public/assets/images/certificate.jpg";
 
 const Intro = ({ onAnimationEnd }) => {
   const [progress, setProgress] = useState(0);
@@ -38,6 +39,20 @@ const Intro = ({ onAnimationEnd }) => {
           style={{ width: `${progress}%` }}
         ></div>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: [0, 1] }}
+        transition={{ duration: 3 }}
+        className="flex justify-center p-3 w-6/12 sm:w-4/12 md:w-6/12 lg:w-3/12 2xl:w-2/12"
+      >
+        <Image
+          src={certificate}
+          alt="Stipriausi Lietuvoje 2023-2024"
+          className="w-full h-auto"
+          priority
+        />
+      </motion.div>
     </div>
   );
 };
