@@ -62,7 +62,7 @@
 
 @layer utilities {
   body {
-    @apply bg-gray-100 dark:bg-slate-950 scroll-smooth;
+    @apply bg-gray-200 dark:bg-slate-950 scroll-smooth;
   }
 
   .cards-container .card:nth-child(2),

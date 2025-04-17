@@ -7,7 +7,10 @@ import {
 
 const FAQ = () => {
   return (
-    <div className="flex flex-col w-full md:scroll-m-10 scroll-m-12" id="faq">
+    <div
+      className="flex flex-col w-full md:scroll-m-10 scroll-m-12"
+      id="dazniausiai-uzduodami-klausimai"
+    >
       <div className="bg-linear-to-br from-gray-200 to-red-50 dark:from-slate-900 dark:to-red-900 2xl:rounded-bl-full 2xl:rounded-tr-full p-10">
         <div className="md:w-2/3 mx-auto">
           <div className="flex flex-col">
@@ -21,7 +24,9 @@ const FAQ = () => {
         <div className="flex mx-auto 2xl:w-2/5 lg:w-1/2 shadow-lg rounded-lg mt-2 bg-gray-500/5 backdrop-filter backdrop-blur-xs">
           <Accordion type="single" collapsible className="w-full p-4 md:ml-6">
             <AccordionItem value="1">
-              <AccordionTrigger>Ar atvykstate į vietą?</AccordionTrigger>
+              <AccordionTrigger>
+                Ar galite atvykti pas mus į ofisą?
+              </AccordionTrigger>
               <AccordionContent>
                 <span className="font-bold">Taip.</span> Stengiamės, kad
                 kiekvienam klientui būtų patogu.

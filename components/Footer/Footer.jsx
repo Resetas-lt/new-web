@@ -66,7 +66,14 @@ const Footer = () => {
             <li>
               <span className="flex flex-row items-center footer-link">
                 <MdArrowRight className="text-red-600" size={25} />
-                <Link href="/#faq">D.U.K.</Link>
+                <Link href="/#apie">Apie mus</Link>
+              </span>
+            </li>
+
+            <li>
+              <span className="flex flex-row items-center footer-link">
+                <MdArrowRight className="text-red-600" size={25} />
+                <Link href="/#dazniausiai-uzduodami-klausimai">D.U.K.</Link>
               </span>
             </li>
           </ul>
@@ -107,13 +114,13 @@ const Footer = () => {
 
       <div className="flex justify-between items-center font-mono font-semibold mt-3 py-4">
         <span className="text-center text-xs text-gray-200 md:py-3 w-full border-r border-gray-600">
-          &copy; MB RESETAS LT. <br className="md:hidden block" /> Visos teisės
-          saugomos.
+          <span className="text-red-600">&copy; MB RESETAS LT.</span>{" "}
+          <br className="md:hidden block" /> Visos teisės saugomos.
         </span>
 
         <span className="text-center text-xs text-gray-200 font-semibold w-full">
           Sprendimas - <br className="md:hidden block" />{" "}
-          <span className="text-red-600">MB RESETAS LT</span>
+          <span className="text-red-600">MŪSŲ PAČIŲ {"😎"}</span>
         </span>
       </div>
     </footer>

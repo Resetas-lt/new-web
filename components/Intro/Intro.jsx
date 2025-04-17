@@ -44,7 +44,7 @@ const Intro = ({ onAnimationEnd }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1] }}
         transition={{ duration: 3 }}
-        className="flex justify-center p-3 w-6/12 sm:w-4/12 md:w-6/12 lg:w-3/12 2xl:w-2/12"
+        className="flex justify-center p-3 w-6/12 sm:w-4/12 md:w-6/12 lg:w-2/12 2xl:w-xs"
       >
         <Image
           src={certificate}
