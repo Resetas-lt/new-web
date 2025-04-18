@@ -25,7 +25,7 @@ const FAQ = () => {
           <Accordion type="single" collapsible className="w-full p-4 md:ml-6">
             <AccordionItem value="1">
               <AccordionTrigger>
-                Ar galite atvykti pas mus į ofisą?
+                Ar remontuojate atvykdami pas klientą?
               </AccordionTrigger>
               <AccordionContent>
                 <span className="font-bold">Taip.</span> Stengiamės, kad
@@ -33,7 +33,7 @@ const FAQ = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="8">
+            <AccordionItem value="2">
               <AccordionTrigger>
                 Ar turite veikiančią el. parduotuvę?
               </AccordionTrigger>
@@ -44,7 +44,7 @@ const FAQ = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="2">
+            <AccordionItem value="3">
               <AccordionTrigger>
                 Ar pas jus galima įsigyti naują įrenginį?
               </AccordionTrigger>
@@ -56,7 +56,7 @@ const FAQ = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="3">
+            <AccordionItem value="4">
               <AccordionTrigger>
                 Ar galite prijungti naują spausdintuvą?
               </AccordionTrigger>
@@ -66,7 +66,7 @@ const FAQ = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="4">
+            <AccordionItem value="5">
               <AccordionTrigger>
                 Ar prekiaujate spausdintuvų kasetėmis?
               </AccordionTrigger>
@@ -77,7 +77,7 @@ const FAQ = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="5">
+            <AccordionItem value="6">
               <AccordionTrigger>
                 Ar remontuojate mobiliuosius įrenginius?
               </AccordionTrigger>
@@ -87,7 +87,7 @@ const FAQ = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="6">
+            <AccordionItem value="7">
               <AccordionTrigger>
                 Ar teikiate paslaugas ne darbo dienomis/laiku?
               </AccordionTrigger>
@@ -99,15 +99,14 @@ const FAQ = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="7">
+            <AccordionItem value="8">
               <AccordionTrigger>
                 Ar galima su jumis pasikonsultuoti dėl naujo įrenginio
                 įsigijimo?
               </AccordionTrigger>
               <AccordionContent>
                 <span className="font-bold">Taip.</span> Galime Jums padėti
-                išsirinkti geriausią variantą pagal Jūsų poreikius. <br />
-                Paslaugos kaina - nemokamai.
+                išsirinkti geriausią variantą pagal Jūsų poreikius.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

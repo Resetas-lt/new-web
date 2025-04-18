@@ -122,7 +122,7 @@ const Navbar = () => {
     },
     {
       label: "Kontaktai",
-      href: "#",
+      href: "/#kontaktai",
     },
   ];
 
@@ -303,7 +303,7 @@ const Navbar = () => {
                 </DropdownMenu>
                 <li>
                   <Link
-                    href="#"
+                    href="/#kontaktai"
                     className="block font-semibold py-2 px-3 md:p-0 rounded md:hover:bg-transparent md:hover:text-red-700 md:dark:hover:text-red-500 dark:text-white transition-all ease-in-out"
                   >
                     Kontaktai

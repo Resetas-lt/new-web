@@ -1,6 +1,7 @@
 import Hero from "../components/Hero/Hero";
 import About from "@/components/About/About";
 import FAQ from "@/components/FAQ/FAQ";
+import Contacts from "@/components/Contacts/Contacts";
 
 export const metadata = {
   title:
@@ -15,6 +16,7 @@ export default function Page() {
       <Hero />
       <About />
       <FAQ />
+      <Contacts />
     </>
   );
 }

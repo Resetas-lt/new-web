@@ -11,7 +11,13 @@ const Footer = () => {
     <footer className="bg-slate-900 text-white px-10 pt-10 pb-2 w-full h-full">
       <div className="grid md:grid-cols-3 gap-4">
         <div className="flex flex-col items-center">
-          <Image src={logo} alt="logo" width={150} height={150} />
+          <Image
+            src={logo}
+            className="transition ease-in-out hover:scale-105"
+            alt="logo"
+            width={150}
+            height={150}
+          />
           <span className="my-1 font-bold">
             Visos IT paslaugos vienoje vietoje!
           </span>
